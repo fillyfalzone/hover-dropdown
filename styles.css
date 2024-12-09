@@ -1,0 +1,77 @@
+/* Style du bouton dropdown */
+.dropbtn {
+  background-color: #04AA6D; 
+  color: white; 
+  padding: 10px; 
+  font-size: 16px;
+  border: none; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  gap: 5px; 
+}
+
+/* Conteneur du dropdown, positionné relativement */
+.dropdown {
+  position: relative; 
+  display: inline-block; 
+}
+
+/* Style du contenu du dropdown, caché par défaut */
+.dropdown-content {
+  position: absolute;
+  background-color: #f1f1f1; 
+  min-width: 160px; 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+  z-index: 1; 
+  opacity: 0; 
+  visibility: hidden; 
+  height: 0;  
+  padding: 0 16px; 
+  overflow: hidden; 
+  transition: opacity 300ms ease, visibility 0s 300ms, height 300ms ease; 
+}
+
+/* Style des liens dans le dropdown */
+.dropdown-content a {
+  color: black; 
+  padding: 12px 16px; 
+  text-decoration: none;
+  display: block;
+}
+
+/* Effet hover sur les liens */
+.dropdown-content a:hover {
+  background-color: #ddd; 
+}
+
+/* Changement de fond du bouton lorsque le dropdown est survolé */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* Affichage du contenu du dropdown avec une transition douce */
+.dropdown:hover .dropdown-content {
+  opacity: 1; 
+  visibility: visible; 
+  height: auto;  
+  padding: 12px 16px; 
+  overflow: visible;  
+  transition: opacity 500ms ease, visibility 0s, height 500ms ease; 
+}
+
+/* Style du chevron (icône) */
+.dropbtn .chevron {
+  display: inline-block;
+  content: ""; 
+  width: 25px;
+  height: 25px; 
+  background: url('chevron.svg') center center / cover no-repeat; 
+  transition: all 500ms ease; 
+}
+
+/* Rotation du chevron lors du survol */
+.dropdown:hover .chevron,
+.dropbtn:hover .chevron {
+  transform: rotate(180deg); 
+}
